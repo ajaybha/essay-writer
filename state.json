@@ -1,0 +1,19 @@
+{
+    'type': 'AssistantAgentState', 
+    'version': '1.0.0', 
+    'llm_context': {
+        'messages': [
+            {
+                'content': 'Write a short poem about the sea.', 
+                'source': 'user', 
+                'type': 'UserMessage'
+            },
+            {
+                'content': 'The ocean sighs, a restless breath,\nOf emerald green and sapphire depth.\nWaves crash and roar, a mighty song,\nWhere salty spray and sunlight throng.\n\nThe seabirds cry, a mournful call,\nAs secrets deep within it fall.\nA timeless dance, forever free,\nThe boundless ocean, wild and deep, you see.\n', 
+                'thought': None, 
+                'source': 'primary', 
+                'type': 'AssistantMessage'
+            }
+        ]
+    }
+}

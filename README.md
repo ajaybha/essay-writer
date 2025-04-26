@@ -33,7 +33,7 @@ Then open the file and add your API keys
 ```
 OPENAI_API_KEY=your-openai-api-key
 ```
-## Load environment variavles into python
+## Load environment variables into python
 In your `main.py` file, use the following code to load the environment variables defined in your `.env ` file
 ```
 import os

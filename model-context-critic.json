@@ -1,0 +1,33 @@
+[
+        UserMessage(
+            content='Write a short poem about the sea.', 
+            source='user', 
+            type='UserMessage'
+        ), 
+        
+        UserMessage(
+            content='The restless sea, a sapphire sheet,\nWhispers secrets, softly sweet.\nWaves crash and roar, a rhythmic beat,\nAgainst the shore, a timeless feat.\n\nSun-kissed spray, a salty mist,\nReflecting light, a vibrant twist.\nThe ocean sighs, a gentle fist,\nAnd holds the world in endless mist.\n', 
+            source='primary', 
+            type='UserMessage'
+        ), 
+        
+        AssistantMessage(
+            content='This is a good start!  The imagery is strong and evocative.  However, the poem feels a bit repetitive.  "Softly sweet" and "rhythmic beat" are a bit close in meaning, and the final stanza uses similar phrasing ("endless mist").  Try to vary the language and explore different aspects of the sea.  Consider what *specific* secrets the sea whispers, or what specific feeling the sun-kissed spray evokes.  What is the *unique* character of the sea in this moment?  More sensory details would also strengthen the poem.  For example, instead of "a timeless feat," try something more evocative.\n', 
+            thought=None, 
+            source='critic', 
+            type='AssistantMessage'
+        ), 
+        
+        UserMessage(
+            content="The restless sea, a sapphire sheen,\nWhispers tales of sunken queen,\nOf coral castles, lost and deep,\nWhere sunbeams dance, secrets to keep.\n\nSalt-laced spray, a stinging kiss,\nIgniting fireflies, a humid bliss.\nA groaning roar, a powerful sigh,\nAgainst the shore, a timeless cry.\n\nAzure depths, where shadows hide,\nAncient creatures, side by side,\nEmerald froth, a foaming crest,\nThe ocean's heart, a whispered test.\n", 
+            source='primary', 
+            type='UserMessage'
+        ), 
+        
+        AssistantMessage(
+            content='APPROVE\n', 
+            thought=None, 
+            source='critic', 
+            type='AssistantMessage'
+        )
+]
