@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+import os
+
 # autogen_core
 from autogen_core import EVENT_LOGGER_NAME
 from autogen_core.models import UserMessage
@@ -13,6 +16,10 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 import asyncio
 import logging
 
+# load environment variables from .env file
+load_dotenv()
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 # Setup the logging module
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(EVENT_LOGGER_NAME)
@@ -24,7 +31,7 @@ logger.setLevel(logging.WARNING)
 # define a model client. You can use other model client that implements the "ChatCompletionClient" interface
 model_client = OpenAIChatCompletionClient(
     model = "gemini-1.5-flash-8b",
-    api_key = "AIzaSyA756huzFScQAUoI2S3Mc53n6kVpDyCXbE"
+    api_key = GEMINI_API_KEY
 )
 
 # define a tool that searches the web for information

@@ -1,4 +1,7 @@
 
+from dotenv import load_dotenv
+import os
+
 import asyncio
 
 # autogen-agentchat
@@ -14,10 +17,14 @@ from autogen_core  import CancellationToken
 # autogen_ext
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 
+# load environment variables from .env file
+load_dotenv()
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 # create Gemini model client - OpenAIChatCompletionClient API
 model_client = OpenAIChatCompletionClient(
     model = "gemini-1.5-flash-8b",
-    api_key = "AIzaSyA756huzFScQAUoI2S3Mc53n6kVpDyCXbE"
+    api_key = GEMINI_API_KEY
 )
 
 # create the primary agent

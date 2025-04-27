@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+import os
+
 from typing import Literal
 from pydantic import BaseModel
 
@@ -16,6 +19,10 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 # others
 import asyncio
 
+# load environment variables from .env file
+load_dotenv()
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 # the response format for the agent as a Pydantic base model
 class AgentResponse(BaseModel):
     thoughts: str
@@ -25,7 +32,7 @@ class AgentResponse(BaseModel):
 # define a model client. You can use other model client that implements the "ChatCompletionClient" interface
 model_client = OpenAIChatCompletionClient(
     model = "gemini-1.5-flash-8b",
-    api_key = "AIzaSyA756huzFScQAUoI2S3Mc53n6kVpDyCXbE"
+    api_key = GEMINI_API_KEY
 )
 
 
